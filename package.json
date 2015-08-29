@@ -10,6 +10,7 @@
   "author": "hiEven<kiki44552002@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "react": "^0.13.3",
     "react-redux": "^1.0.1",
     "redux": "^1.0.1"
   },

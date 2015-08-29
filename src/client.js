@@ -1,18 +1,17 @@
+import React from 'react';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './containers/app';
 import { todo } from './reducers';
 
-import { addTodo } from './actions/todoAction';
+const store = createStore(todo, window.__data);
+const rootElement = document.getElementById('root');
 
-console.log(todo);
+console.log(App);
 
-let store = createStore(todo, window.__data);
-
-let unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
+React.render(
+  <Provider store={store}>
+    {() => <App />}
+  </Provider>,
+  rootElement
 );
-
-store.dispatch(addTodo('Learn about actions'));
-store.dispatch(addTodo('Learn about reducers'));
-store.dispatch(addTodo('Learn about store'));
-
-unsubscribe();
