@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack"
+    "dev": "webpack --watch",
+    "build": "webpack -p"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "hiEven<kiki44552002@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "react-redux": "^1.0.1",
     "redux": "^1.0.1"
