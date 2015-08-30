@@ -3,14 +3,13 @@ import React, { Component, PropTypes } from 'react';
 export default class Todo extends Component {
 
   static propTypes = {
-    text: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    text: PropTypes.string.isRequired
   };
 
   render() {
 
     return (
-      <li onClick={this.props.onClick} >
+      <li>
         {this.props.text}
       </li>
     );

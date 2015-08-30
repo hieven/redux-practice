@@ -2,7 +2,17 @@ import { ADD_TODO, REMOVE_TODO } from '../actions/actionTypes';
 
 const initialState = {
 
-  todos: []
+  todos: [
+    {
+      text: 'wash dishes'
+    },
+    {
+      text: 'send email to Joanne'
+    },
+    {
+      text: 'bring kids to school'
+    }
+  ]
 
 };
 
@@ -14,8 +24,7 @@ export default function todo(state = initialState, action) {
     return {
       ...state,
       todos: [...state.todos, {
-        text: action.text,
-        completed: false
+        text: action.text
       }]
     };
 

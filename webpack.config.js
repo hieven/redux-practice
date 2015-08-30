@@ -1,7 +1,11 @@
 module.exports = {
-  entry: './src/client.js',
+  entry: [
+    './src/client.js'
+  ],
 
   output: {
+    path: './build',
+    publicPath: '/assets',
     filename: 'bundle.js'
   },
 
