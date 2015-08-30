@@ -17,11 +17,9 @@ export default class Root extends Component {
     const { history } = this.props;
 
     return (
-      <div>
-        <Provider store={store}>
-          {() => <Router history={history} children={routes} />}
-        </Provider>
-      </div>
+      <Provider store={store}>
+        {() => <Router history={history} children={routes} />}
+      </Provider>
     );
   }
 }
