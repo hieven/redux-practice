@@ -8,7 +8,7 @@ export default class AddTodo extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    const node = findDOMNoe(this.refs.input);
+    const node = React.findDOMNode(this.refs.input);
     const text = node.value.trim();
     this.props.onAddClick(text);
     node.value = '';

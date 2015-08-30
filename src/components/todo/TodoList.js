@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import Todo from './todo';
+import Todo from './Todo';
 
 export default class TodoList extends Component {
 
   static propTypes = {
-    onTodoClick: PropTypes.func.isRequired,
     todos: PropTypes.arrayOf(PropTypes.shape({
       text: PropTypes.string.isRequired
     }).isRequired).isRequired
@@ -14,9 +13,7 @@ export default class TodoList extends Component {
     return (
       <ul>
         {this.props.todos.map((todo, index) =>
-          <Todo {...todo}
-                key={index}
-                onClick={() => this.props.onTodoClick(index)} />
+          <Todo {...todo} key={index} />
         )}
       </ul>
     );
